@@ -1,0 +1,38 @@
+<div class="toggle" (click)="toggleOpenState()">
+  <ng-container *ngIf="!open; else closed">
+    <svg width="2em" height="2em">
+      <rect fill="#fff" width="2em" height="calc(2em*0.1)"></rect>
+      <rect
+        fill="#fff"
+        y="calc(1em*0.6)"
+        width="2em"
+        height="calc(2em*0.1)"
+      ></rect>
+      <rect
+        fill="#fff"
+        y="calc(1em*1.2)"
+        width="2em"
+        height="calc(2em*0.1)"
+      ></rect>
+    </svg>
+  </ng-container>
+
+  <ng-template #closed>
+    <svg style="margin-left: 0.35em; margin-top: -0.1em; overflow: visible">
+      <rect
+        fill="#fff"
+        width="2em"
+        height="calc(2em*0.10)"
+        transform="rotate(45)"
+      ></rect>
+      <rect
+        fill="white"
+        width="2em"
+        height="calc(2em*0.10)"
+        y="-1.1em"
+        x="-0.9em"
+        transform="rotate(135)"
+      ></rect>
+    </svg>
+  </ng-template>
+</div>

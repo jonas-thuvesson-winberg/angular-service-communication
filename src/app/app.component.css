@@ -1,0 +1,9 @@
+app-header {
+  position: fixed;
+  top: 0;
+}
+
+#main-content {
+  margin-top: 60px;
+  padding: 2em;
+}

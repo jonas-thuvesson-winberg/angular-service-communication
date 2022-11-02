@@ -1,0 +1,11 @@
+<div class="section-toggle-container">
+  <button (click)="$event.preventDefault(); toggle()">
+    <ng-container *ngIf="isOpen; else closed"
+      ><span style="font-size: 1.3em; position: relative; top: 3px"
+        >^</span
+      ></ng-container
+    >
+    <ng-template #closed>v</ng-template>
+  </button>
+  <div class="toggle-text">(toggle me)</div>
+</div>
