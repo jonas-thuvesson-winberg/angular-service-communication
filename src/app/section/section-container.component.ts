@@ -3,11 +3,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ToggleStateService } from '../toggle-state.service';
 
 @Component({
-  selector: 'app-section',
-  templateUrl: './section.component.html',
-  styleUrls: ['./section.component.less'],
+  selector: 'app-section-container',
+  templateUrl: './section-container.component.html',
+  styleUrls: ['./section-container.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [ToggleStateService],
 })
-export class SectionComponent {
-  constructor(protected readonly sectionToggleService: ToggleStateService) {}
-}
+export class SectionContainerComponent {}

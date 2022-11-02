@@ -1,13 +1,20 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ToggleStateService } from '../toggle-state.service';
+import { CommonModule } from '@angular/common';
+import { SectionContainerComponent } from './section-container.component';
+import { SectionContentComponent } from './section-content/section-content.component';
 import { SectionToggleComponent } from './section-toggle/section-toggle.component';
-import { SectionComponent } from './section.component';
 
 @NgModule({
   imports: [CommonModule],
-  providers: [ToggleStateService],
-  declarations: [SectionComponent, SectionToggleComponent],
-  exports: [SectionComponent, SectionToggleComponent],
+  declarations: [
+    SectionContainerComponent,
+    SectionContentComponent,
+    SectionToggleComponent,
+  ],
+  exports: [
+    SectionContainerComponent,
+    SectionToggleComponent,
+    SectionContentComponent,
+  ],
 })
 export class SectionModule {}
